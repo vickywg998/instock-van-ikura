@@ -1,13 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class Warehouses extends Component {
-    render() {
-        return (
-            <h1>Warehouses Page</h1>
-        )
-    }
+  render() {
+    return <h1>Locations</h1>;
+  }
 }
-
-
 
 export default Warehouses;
