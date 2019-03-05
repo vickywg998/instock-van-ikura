@@ -115,7 +115,6 @@ input.search {
   background-position: 5% 50%;
   text-indent: 20px;
 }
-<<<<<<< HEAD
 
 @media only screen and (min-width: 200px) and (max-width: 767px) {
   #card table th {
@@ -150,9 +149,7 @@ input.search {
     display: none;
   }
   td:nth-child(5) {
-    border-bottom: 2px solid #AFAFAF;
+    border-bottom: 2px solid #afafaf;
   }
 }
-=======
->>>>>>> 502c883d46dfdfafaa09e04ef342b335f6309aa5
 /*# sourceMappingURL=styles.css.map */
