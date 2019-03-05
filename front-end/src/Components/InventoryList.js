@@ -8,6 +8,7 @@ class InventoryList extends React.Component {
     this.state = {
       data: [{
         item: "Product Name Here",
+        description: "Here is a very brief description of the product…",
         lastOrdered: "05/24/2018",
         location: "Toronto, CAN",
         quantity: "12,000",
@@ -15,6 +16,7 @@ class InventoryList extends React.Component {
       },
       {
         item: "Product Name Here",
+        description: "Here is a very brief description of the product…",
         lastOrdered: "05/24/2018",
         location: "Toronto, CAN",
         quantity: "12,000",
@@ -22,6 +24,7 @@ class InventoryList extends React.Component {
       },
       {
         item: "Product Name Here",
+        description: "Here is a very brief description of the product…",
         lastOrdered: "05/24/2018",
         location: "Toronto, CAN",
         quantity: "12,000",
@@ -29,6 +32,7 @@ class InventoryList extends React.Component {
       },
       {
         item: "Product Name Here",
+        description: "Here is a very brief description of the product…",
         lastOrdered: "05/24/2018",
         location: "Toronto, CAN",
         quantity: "12,000",
@@ -36,6 +40,7 @@ class InventoryList extends React.Component {
       },
       {
         item: "Product Name Here",
+        description: "Here is a very brief description of the product…",
         lastOrdered: "05/24/2018",
         location: "Toronto, CAN",
         quantity: "12,000",
@@ -43,6 +48,7 @@ class InventoryList extends React.Component {
       },
       {
         item: "Product Name Here",
+        description: "Here is a very brief description of the product…",
         lastOrdered: "05/24/2018",
         location: "Toronto, CAN",
         quantity: "12,000",
@@ -50,6 +56,7 @@ class InventoryList extends React.Component {
       },
       {
         item: "Product Name Here",
+        description: "Here is a very brief description of the product…",
         lastOrdered: "05/24/2018",
         location: "Toronto, CAN",
         quantity: "12,000",
@@ -57,6 +64,7 @@ class InventoryList extends React.Component {
       },
       {
         item: "Product Name Here",
+        description: "Here is a very brief description of the product…",
         lastOrdered: "05/24/2018",
         location: "Toronto, CAN",
         quantity: "12,000",
@@ -65,6 +73,7 @@ class InventoryList extends React.Component {
 
       {
         item: "Product Name Here",
+        description: "Here is a very brief description of the product…",
         lastOrdered: "05/24/2018",
         location: "Toronto, CAN",
         quantity: "12,000",
@@ -76,6 +85,7 @@ class InventoryList extends React.Component {
     let rows = this.state.data.map((item, i) => {
       return <InventoryItem
         item={item.item}
+        description={item.description}
         lastOrdered={item.lastOrdered}
         location={item.location}
         quantity={item.quantity}

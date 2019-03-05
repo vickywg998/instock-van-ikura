@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 body {
   font-family:'Avenir Next', sans-serif;
@@ -19,6 +20,10 @@ line-height: 44px;
 @mixin h3-font {
   font-size: 16px;
   line-height: 24px;
+}
+@mixin h4-font {
+  font-size: 14px;
+  line-height: 22px;
 }
 
 @mixin h5-font {
@@ -47,7 +52,10 @@ td {
   padding: 24px 0px;
   @include h3-font;
 }
-
+.description__font {
+  @include h4-font;
+  font-weight: normal;
+}
 table {
   border-collapse: collapse;
 }
@@ -63,7 +71,9 @@ th {
 td:first-child {
   font-weight: bold;
 }
+td:last-child {
 
+}
 
 .search {
 border: 1px solid grey;
