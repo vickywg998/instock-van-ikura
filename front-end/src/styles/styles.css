@@ -2,4 +2,107 @@
   margin: 0;
   padding: 0;
 }
+
+body {
+  font-family: 'Avenir Next', sans-serif;
+}
+
+.inventorylist__container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  padding: 80px 180px 0px 180px;
+  /*delete 80px when navbar is added*/
+}
+
+td {
+  border-bottom: 2px solid #AFAFAF;
+  text-align: left;
+  padding: 24px 0px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.inventorylist__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+th {
+  text-align: left;
+  font-size: 12px;
+  line-height: 20px;
+  color: #999999;
+}
+
+td {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+td:first-child {
+  font-weight: bold;
+}
+
+.search__container {
+  width: 220px;
+}
+
+.upload__button {
+  background-color: #0095FF;
+  color: white;
+  width: 90px;
+  height: 50px;
+  padding: 10px 10px;
+  border-radius: 8px;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.search {
+  border: 1px solid grey;
+  width: 200px;
+  height: 50px;
+}
+
+::-webkit-input-placeholder {
+  color: black;
+}
+
+:-ms-input-placeholder {
+  color: black;
+}
+
+::-ms-input-placeholder {
+  color: black;
+}
+
+::placeholder {
+  color: black;
+}
+
+input.search {
+  padding: 10px;
+  border-radius: 8px;
+  height: 25px;
+  background-image: url("../src/Assets/Icons/PNG/Icon-search.png");
+  background-repeat: no-repeat;
+  background-position: 5% 50%;
+  text-indent: 20px;
+}
 /*# sourceMappingURL=styles.css.map */

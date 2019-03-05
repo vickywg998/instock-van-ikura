@@ -2,3 +2,86 @@
   margin: 0;
   padding: 0;
 }
+body {
+  font-family:'Avenir Next', sans-serif;
+}
+
+@mixin h1-herofont {
+  font-size:60px;
+  line-height: 68px;
+}
+
+@mixin h1-font {
+font-size: 36px;
+line-height: 44px;
+}
+
+@mixin h3-font {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@mixin h5-font {
+  font-size: 12px;
+  line-height: 20px;
+  color: #999999;
+}
+
+
+.inventorylist__container {
+width: 100%;
+display: flex;
+flex-flow: column wrap;
+padding: 80px 180px 0px 180px; /*delete 80px when navbar is added*/ 
+.inventorylist__wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding-bottom: 48px;
+}
+}
+
+td {
+  border-bottom: 2px solid #AFAFAF;
+  text-align: left;
+  padding: 24px 0px;
+  @include h3-font;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+
+th {
+  text-align: left;
+  @include h5-font;
+
+}
+
+
+td:first-child {
+  font-weight: bold;
+}
+
+
+.search {
+border: 1px solid grey;
+min-width: 252px;
+height: 48px;
+}
+
+::placeholder {
+  color: black;
+} 
+
+  input.search {
+    padding:16px;
+    border-radius: 8px;
+    height: 25px;
+    background-image: url('../Assets/Icons/Icon-search.svg');
+    background-repeat: no-repeat;
+    background-position:5% 50%;
+    text-indent: 20px;
+}
+

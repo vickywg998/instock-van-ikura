@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
+import InventoryList from '../Components/InventoryList'
 
 class Inventory extends Component {
     render() {
         return (
-            <h1>Inventory Page</h1>
+            <div className="inventorylist__container">
+                <div className="inventorylist__wrapper">
+                    <h1>Inventory</h1>
+                    <input className="search" placeholder="Search" />
+                </div>
+                <InventoryList />
+            </div>
         )
     }
 }
-
-
 
 export default Inventory;
