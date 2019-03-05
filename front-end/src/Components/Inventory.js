@@ -6,10 +6,12 @@ class Inventory extends Component {
         return (
             <div className="inventorylist__container">
                 <div className="inventorylist__wrapper">
-                    <h1>Inventory</h1>
+                    <h1 className="inventory__font">Inventory</h1>
                     <input className="search" placeholder="Search" />
                 </div>
-                <InventoryList />
+                <div id="card">
+                    <InventoryList />
+                </div>
             </div>
         )
     }

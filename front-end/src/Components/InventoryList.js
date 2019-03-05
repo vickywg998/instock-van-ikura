@@ -101,7 +101,6 @@ class InventoryList extends React.Component {
         <th>LOCATION</th>
         <th>QUANTITY</th>
         <th>STATUS</th>
-        
       </tr>
       <tbody>
         {rows}
