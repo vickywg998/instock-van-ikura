@@ -1,6 +1,100 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Avenir Next', sans-serif;
+}
+
+.inventorylist__container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  padding: 80px 180px 0px 180px;
+  /*delete 80px when navbar is added*/
+}
+
+.inventorylist__container .inventorylist__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 48px;
+}
+
+td {
+  border-bottom: 2px solid #AFAFAF;
+  text-align: left;
+  padding: 24px 0px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.description__font {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: normal;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+  font-size: 12px;
+  line-height: 20px;
+  color: #999999;
+}
+
+td:first-child {
+  font-weight: bold;
+}
+
+.search {
+  border: 1px solid grey;
+  min-width: 252px;
+  height: 48px;
+}
+
+::-webkit-input-placeholder {
+  color: black;
+}
+
+:-ms-input-placeholder {
+  color: black;
+}
+
+::-ms-input-placeholder {
+  color: black;
+}
+
+::placeholder {
+  color: black;
+}
+
+input.search {
+  padding: 16px;
+  border-radius: 8px;
+  height: 25px;
+  background-image: url("../Assets/Icons/Icon-search.svg");
+  background-repeat: no-repeat;
+  background-position: 5% 50%;
+  text-indent: 20px;
 }
 
 nav {
