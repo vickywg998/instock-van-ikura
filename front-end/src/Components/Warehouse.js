@@ -1,32 +1,24 @@
 import React from 'react'
 
-export default function Warehouse() {
+export default function Warehouse(props) {
   return (
-    <div className="warehouse__list">
-      <div className="warehouse">
-        <h2 className="warehouse__name">Warehouse Number 1</h2>
-        <h4 className="warehouse__address">469 King St W, Toronto, ON</h4>
-        <h4 className="warehouse__manager--name">Mara Weinberg</h4>
-        <h4 className="warehouse__manager--title">Warehouse Manager</h4>
-        <h4 className="warehouse__phone">+1 416 678 2345</h4>
-        <h4 className="warehouse__email">weinberg@instack.com</h4>
-        <h4 className="warehouse__type">
-          Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation
-        </h4>
-        <hr />
-      </div>
-      <div className="warehouse">
-        <h2 className="warehouse__name">Warehouse Number 1</h2>
-        <h4 className="warehouse__address">469 King St W, Toronto, ON</h4>
-        <h4 className="warehouse__manager--name">Mara Weinberg</h4>
-        <h4 className="warehouse__manager--title">Warehouse Manager</h4>
-        <h4 className="warehouse__phone">+1 416 678 2345</h4>
-        <h4 className="warehouse__email">weinberg@instack.com</h4>
-        <h4 className="warehouse__type">
-          Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation
-        </h4>
-        <hr />
-      </div>
-    </div>
+    <tr>
+      <td className="warehouse">
+        {props.name}
+        <br />
+        <p className="description__font">{props.address}</p>
+      </td>
+      <td className="warehouse__contact">
+        {props.managerName}
+        <br />
+        {props.managerTitle}
+      </td>
+      <td className="warehouse__contact--info">
+        {props.phone}
+        <br />
+        {props.email}
+      </td>
+      <td className="warehouse__categories">{props.categories}</td>
+    </tr>
   )
 }

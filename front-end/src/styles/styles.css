@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: 'Avenir Next', sans-serif;
+  font-family: "Avenir Next", sans-serif;
 }
 
 .inventorylist__container {
@@ -37,7 +37,7 @@ body {
 }
 
 td {
-  border-bottom: 2px solid #AFAFAF;
+  border-bottom: 2px solid #afafaf;
   text-align: left;
   padding: 24px 0px;
   font-size: 16px;
@@ -95,9 +95,5 @@ input.search {
   background-repeat: no-repeat;
   background-position: 5% 50%;
   text-indent: 20px;
-}
-
-nav {
-  background: black;
 }
 /*# sourceMappingURL=styles.css.map */
