@@ -1,5 +1,5 @@
 import React from 'react'
-import dot from '../Assets/Icons/Icon-kebab-default.svg'
+import dot from '../../Assets/Icons/Icon-kebab-default.svg'
 const InventoryItem = props => {
   return (
     <tr>
