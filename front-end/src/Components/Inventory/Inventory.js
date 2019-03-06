@@ -12,7 +12,7 @@ class Inventory extends Component {
             <h1 className="inventory__font">Inventory</h1>
             <input className="search" placeholder="Search" />
           </div>
-          <div id="card">
+          <div className="card">
             <InventoryList />
           </div>
         </div>

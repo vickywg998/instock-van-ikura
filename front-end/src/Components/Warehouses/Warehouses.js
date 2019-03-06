@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Navbar from '../Navbar/Navbar'
 import Warehouse from '../Warehouse/Warehouse'
+import './Warehouses.scss'
 
 class Warehouses extends Component {
   state = {
@@ -116,22 +117,12 @@ class Warehouses extends Component {
     return (
       <>
         <Navbar routeProps={this.props.routeProps} />
-        <div className="locationlist__container">
-          <div className="locationlist__wrapper">
-            <h1 className="location__font">Locations</h1>
+        <div className="location__container">
+          <div className="location__header">
+            <h1 className="location__title">Locations</h1>
             <input type="text" placeholder="Search" className="search" />
           </div>
-          <table className="Locationtable">
-            <tbody>
-              <tr>
-                <th>WAREHOUSE</th>
-                <th>CONTACT</th>
-                <th>CONTACT INFORMATION</th>
-                <th>CATEGORIES</th>
-              </tr>
-            </tbody>
-            <tbody>{rows}</tbody>
-          </table>
+          <div className="locations">{rows}</div>
         </div>
       </>
     )
