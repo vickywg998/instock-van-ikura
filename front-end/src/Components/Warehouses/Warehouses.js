@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Navbar from '../Navbar/Navbar'
 import Warehouse from '../Warehouse/Warehouse'
+import AddWarehouse from '../AddWarehouse/AddWarehouse'
 import Modal from '../UI/Modal/Modal'
 import addIcon from '../../Assets/Icons/Icon-add.svg'
 import './Warehouses.scss'
@@ -132,7 +133,9 @@ class Warehouses extends Component {
         <Modal
           show={this.state.adding}
           closeModal={this.handleCancelAddingLocation}
-        />
+        >
+          <AddWarehouse />
+        </Modal>
         <Navbar routeProps={this.props.routeProps} />
         <div className="location__container">
           <div className="location__header">

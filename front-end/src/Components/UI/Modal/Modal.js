@@ -4,7 +4,7 @@ import './Modal.scss'
 
 const Modal = props => (
   <>
-    <Backdrop show={props.show} clicked={props.modalClosed} />
+    <Backdrop show={props.show} clicked={props.closeModal} />
     <div
       className="modal"
       style={{
