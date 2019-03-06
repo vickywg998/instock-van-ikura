@@ -1,26 +1,134 @@
 import React, { Component } from 'react'
 import Navbar from './Navbar/Navbar'
+import Warehouse from './Warehouse'
+
 class Warehouses extends Component {
+  state = {
+    data: [
+      {
+        name: 'Warehouse Number 1',
+        address: '469 King St W, Toronto, ON',
+        managerName: 'Mara Weinberg',
+        managerTitle: 'Warehouse Manager',
+        phone: '+1 416 678 2345',
+        email: 'weinberg@instack.com',
+        categories:
+          'Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation',
+      },
+      {
+        name: 'Warehouse Number 1',
+        address: '469 King St W, Toronto, ON',
+        managerName: 'Mara Weinberg',
+        managerTitle: 'Warehouse Manager',
+        phone: '+1 416 678 2345',
+        email: 'weinberg@instack.com',
+        categories:
+          'Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation',
+      },
+      {
+        name: 'Warehouse Number 1',
+        address: '469 King St W, Toronto, ON',
+        managerName: 'Mara Weinberg',
+        managerTitle: 'Warehouse Manager',
+        phone: '+1 416 678 2345',
+        email: 'weinberg@instack.com',
+        categories:
+          'Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation',
+      },
+      {
+        name: 'Warehouse Number 1',
+        address: '469 King St W, Toronto, ON',
+        managerName: 'Mara Weinberg',
+        managerTitle: 'Warehouse Manager',
+        phone: '+1 416 678 2345',
+        email: 'weinberg@instack.com',
+        categories:
+          'Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation',
+      },
+      {
+        name: 'Warehouse Number 1',
+        address: '469 King St W, Toronto, ON',
+        managerName: 'Mara Weinberg',
+        managerTitle: 'Warehouse Manager',
+        phone: '+1 416 678 2345',
+        email: 'weinberg@instack.com',
+        categories:
+          'Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation',
+      },
+      {
+        name: 'Warehouse Number 1',
+        address: '469 King St W, Toronto, ON',
+        managerName: 'Mara Weinberg',
+        managerTitle: 'Warehouse Manager',
+        phone: '+1 416 678 2345',
+        email: 'weinberg@instack.com',
+        categories:
+          'Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation',
+      },
+      {
+        name: 'Warehouse Number 1',
+        address: '469 King St W, Toronto, ON',
+        managerName: 'Mara Weinberg',
+        managerTitle: 'Warehouse Manager',
+        phone: '+1 416 678 2345',
+        email: 'weinberg@instack.com',
+        categories:
+          'Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation',
+      },
+      {
+        name: 'Warehouse Number 1',
+        address: '469 King St W, Toronto, ON',
+        managerName: 'Mara Weinberg',
+        managerTitle: 'Warehouse Manager',
+        phone: '+1 416 678 2345',
+        email: 'weinberg@instack.com',
+        categories:
+          'Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation',
+      },
+      {
+        name: 'Warehouse Number 1',
+        address: '469 King St W, Toronto, ON',
+        managerName: 'Mara Weinberg',
+        managerTitle: 'Warehouse Manager',
+        phone: '+1 416 678 2345',
+        email: 'weinberg@instack.com',
+        categories:
+          'Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation',
+      },
+    ],
+  }
+
   render() {
+    let rows = this.state.data.map((warehouse, i) => {
+      return (
+        <Warehouse
+          key={i}
+          name={warehouse.name}
+          address={warehouse.address}
+          managerName={warehouse.managerName}
+          managerTitle={warehouse.managerTitle}
+          phone={warehouse.phone}
+          email={warehouse.email}
+          categories={warehouse.categories}
+        />
+      )
+    })
     return (
       <>
         <Navbar routeProps={this.props.routeProps}/>
         <div className="warehouse__header">
           <h1>Locations</h1>
-          <input type="text" placeholder="Search" />
+          <input type="text" placeholder="Search" className="search" />
         </div>
-        <div>
-          <h2 className="warehouse__name">Warehouse Number 1</h2>
-          <h4 className="warehouse__address">469 King St W, Toronto, ON</h4>
-          <h4 className="warehouse__manager--name">Mara Weinberg</h4>
-          <h4 className="warehouse__manager--title">Warehouse Manager</h4>
-          <h4 className="warehouse__phone">+1 416 678 2345</h4>
-          <h4 className="warehouse__email">weinberg@instack.com</h4>
-          <h4 className="warehouse__type">
-            Industrial, Automotive, Heavy, Mechanical, Engineering,
-            Transportation
-          </h4>
-        </div>
+        <table>
+          <tr>
+            <th>WAREHOUSE</th>
+            <th>CONTACT</th>
+            <th>CONTACT INFORMATION</th>
+            <th>CATEGORIES</th>
+          </tr>
+          <tbody>{rows}</tbody>
+        </table>
       </>
     )
   }
