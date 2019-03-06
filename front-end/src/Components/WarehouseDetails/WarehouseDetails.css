@@ -22,6 +22,12 @@
   }
 }
 
+@media only screen and (min-width: 1440px) {
+  .location__container {
+    margin: 0 180px;
+  }
+}
+
 .location__header {
   margin: 32px 0;
 }
@@ -118,7 +124,7 @@
 
 @media only screen and (min-width: 1440px) {
   .location__section {
-    min-width: 300px;
+    min-width: 250px;
   }
 }
 
@@ -142,6 +148,18 @@
 
 .locationDetails__top {
   margin: 0 16px;
+}
+
+@media only screen and (min-width: 768px) {
+  .locationDetails__top {
+    margin: 0 24px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .locationDetails__top {
+    margin: 0 180px;
+  }
 }
 
 .locationDetails h1 {
@@ -235,6 +253,16 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin: 0 24px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .locationDetails__inventory {
+    margin: 0 180px;
   }
 }
 
@@ -252,8 +280,26 @@
   }
 }
 
+@media only screen and (min-width: 1440px) {
+  .locationDetails__inventory--section {
+    max-width: 405px;
+  }
+}
+
 .locationDetails hr {
-  margin-top: 24px;
+  margin: 24px 16px 0 16px;
+}
+
+@media only screen and (min-width: 768px) {
+  .locationDetails hr {
+    margin: 24px 24px 0 24px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .locationDetails hr {
+    margin: 24px 180px 0 180px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
