@@ -5,7 +5,6 @@ const InventoryItem = props => {
   
     <tr>
       <td data-label="ITEM">
-
         {props.data.item}<br />
         <p className="description__font">{props.data.description}</p>
       </td>

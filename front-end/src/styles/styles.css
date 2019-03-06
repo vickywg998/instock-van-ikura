@@ -9,14 +9,12 @@ body {
   font-family: "Avenir Next", sans-serif;
 }
 
-
 .inventory__font,
 .location__font {
   padding-bottom: 16px;
 }
 
 @media only screen and (min-width: 768px) {
-
   .inventorylist__container,
   .locationlist__container {
     padding: 80px 24px 0px 24px;
@@ -25,10 +23,8 @@ body {
 }
 
 @media only screen and (min-width: 1440px) {
-
   .inventorylist__container,
   .locationlist__container {
-
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -42,10 +38,8 @@ body {
   }
 }
 
-
 .inventorylist__wrapper,
 .locationlist__wrapper {
-
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -60,10 +54,8 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
-
   .inventorylist__wrapper,
   .locationlist__wrapper {
-
     padding: 0px 16px;
   }
 }
@@ -82,10 +74,8 @@ td {
   font-weight: normal;
 }
 
-
 table.Inventorytable,
 table.Locationtable {
-
   border-collapse: collapse;
   width: 100%;
 }
@@ -104,21 +94,27 @@ td:first-child {
 .search {
   border: 1px solid grey;
   min-width: 252px;
+  height: 48px;
 }
 
-::-webkit-input-placeholder {
+.search .search {
+  border: 1px solid grey;
+  min-width: 252px;
+}
+
+.search ::-webkit-input-placeholder {
   color: black;
 }
 
-:-ms-input-placeholder {
+.search :-ms-input-placeholder {
   color: black;
 }
 
-::-ms-input-placeholder {
+.search ::-ms-input-placeholder {
   color: black;
 }
 
-::placeholder {
+.search ::placeholder {
   color: black;
 }
 
@@ -131,7 +127,6 @@ input.search {
   background-position: 5% 50%;
   text-indent: 20px;
 }
-
 
 @media only screen and (min-width: 200px) and (max-width: 767px) {
   #card table th {
@@ -168,5 +163,15 @@ input.search {
   td:nth-child(5) {
     border-bottom: 2px solid #afafaf !important;
   }
+}
+
+input.search {
+  padding: 16px;
+  border-radius: 8px;
+  height: 25px;
+  background-image: url("../Assets/Icons/Icon-search.svg");
+  background-repeat: no-repeat;
+  background-position: 5% 50%;
+  text-indent: 20px;
 }
 /*# sourceMappingURL=styles.css.map */
