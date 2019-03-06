@@ -18,4 +18,5 @@ router.get('/:locationId', (req, res) => {
     : res.status(404).send({ message: 'No location with this id' })
 })
 
+console.log('test')
 module.exports = router
