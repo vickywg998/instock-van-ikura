@@ -9,22 +9,19 @@ body {
   font-family: "Avenir Next", sans-serif;
 }
 
-.inventory__font,
-.location__font {
+.inventory__font {
   padding-bottom: 16px;
 }
 
 @media only screen and (min-width: 768px) {
-  .inventorylist__container,
-  .locationlist__container {
+  .inventorylist__container {
     padding: 80px 24px 0px 24px;
     /*delete 80px when navbar is added*/
   }
 }
 
 @media only screen and (min-width: 1440px) {
-  .inventorylist__container,
-  .locationlist__container {
+  .inventorylist__container {
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -38,8 +35,7 @@ body {
   }
 }
 
-.inventorylist__wrapper,
-.locationlist__wrapper {
+.inventorylist__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -54,8 +50,7 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
-  .inventorylist__wrapper,
-  .locationlist__wrapper {
+  .inventorylist__wrapper {
     padding: 0px 16px;
   }
 }
@@ -74,8 +69,7 @@ td {
   font-weight: normal;
 }
 
-table.Inventorytable,
-table.Locationtable {
+table.Inventorytable {
   border-collapse: collapse;
   width: 100%;
 }
@@ -129,14 +123,14 @@ input.search {
 }
 
 @media only screen and (min-width: 200px) and (max-width: 767px) {
-  #card table th {
+  .card table th {
     display: none;
   }
-  #card table tr {
+  .card table tr {
     display: block;
     margin-bottom: 20px;
   }
-  #card table td {
+  .card table td {
     padding: 12px;
     display: block;
     width: 100%;
@@ -144,7 +138,7 @@ input.search {
     font-size: 14px;
     line-height: 22px;
   }
-  #card table td::before {
+  .card table td::before {
     content: attr(data-label);
     float: left;
     padding-bottom: 16px;
