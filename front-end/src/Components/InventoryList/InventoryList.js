@@ -1,6 +1,6 @@
 import React from 'react'
 import InventoryItem from '../InventoryItem/InventoryItem'
-
+import './InventoryList.scss'
 
 class InventoryList extends React.Component {
   constructor() {

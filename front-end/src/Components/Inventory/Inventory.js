@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import InventoryList from '../InventoryList/InventoryList'
 import Navbar from '../Navbar/Navbar'
-
+import './Inventory.scss'
 
 class Inventory extends Component {
   render() {
