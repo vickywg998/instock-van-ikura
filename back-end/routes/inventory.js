@@ -55,6 +55,6 @@ router.get('/:id', (req, res) => {
   if (singleItem !== -1) { res.send(inventoryList[singleItem]) }
   else { res.send("No item found") }
 })
-B
+
 module.exports = router
 
