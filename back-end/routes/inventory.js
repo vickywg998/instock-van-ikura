@@ -32,13 +32,9 @@ router.post('/', (req, res) => {
   inventoryList.push(inventoryItemDetail)
   fs.writeFile(INVENTORY__DATA__FILE, JSON.stringify(inventoryList), (err) => {
     if (err) {
-      console.log('Error writing to file:' , err)
-      callback({
-        success: false,
-        msg: "Error updating data."
-      })
+
     } else {
-      callback(data)
+      return;
     };
     console.log("Inventory Item has been added");
 });
