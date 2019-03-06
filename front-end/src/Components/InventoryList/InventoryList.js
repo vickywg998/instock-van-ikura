@@ -1,5 +1,5 @@
 import React from 'react'
-import InventoryItem from './InventoryItem'
+import InventoryItem from '../InventoryItem/InventoryItem'
 
 class InventoryList extends React.Component {
   constructor() {
@@ -113,7 +113,6 @@ class InventoryList extends React.Component {
         <tbody>{rows}</tbody>
       </table>
     )
-
   }
 }
 

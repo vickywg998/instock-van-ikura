@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './styles/styles.scss'
 import { Switch, Route } from 'react-router-dom'
-import Inventory from './Components/Inventory'
-import Home from './Components/Home'
-import Warehouses from './Components/Warehouses'
+import Inventory from './Components/Inventory/Inventory'
+import Home from './Components/Home/Home'
+import Warehouses from './Components/Warehouses/Warehouses'
 
 class App extends Component {
   render() {

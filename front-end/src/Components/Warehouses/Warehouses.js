@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import Navbar from './Navbar/Navbar'
-import Warehouse from './Warehouse'
+import Navbar from '../Navbar/Navbar'
+import Warehouse from '../Warehouse/Warehouse'
 
 class Warehouses extends Component {
   state = {
