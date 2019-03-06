@@ -1,23 +1,27 @@
 import React, { Component } from 'react';
-import './App.css';
 import './styles/styles.scss'
 import { Switch, Route } from 'react-router-dom'
 import Inventory from './Components/Inventory'
 import Home from './Components/Home'
 import Warehouses from './Components/Warehouses'
-import Navbar from './Components/Navbar'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Navbar/>
-        
+
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/warehouses" component={Warehouses} />
+
+          <Route path="/warehouses" render={(routeProps) => {
+            return (<Warehouses routeProps={routeProps.match} />)
+          }} />
           <Route path="/warehouses/:id" component={Warehouses} />
-          <Route path="/inventory" component={Inventory} />
+
+
+          <Route path="/inventory" render={(routeProps) => {
+            return (<Inventory routeProps={routeProps.match} />)
+          }} />
           <Route path="/inventory/:id" component={Inventory} />
         </Switch>
       </div>
