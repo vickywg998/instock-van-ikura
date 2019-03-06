@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Navbar from './Navbar/Navbar'
 import Warehouse from './Warehouse'
 
 class Warehouses extends Component {
@@ -114,19 +115,24 @@ class Warehouses extends Component {
     })
     return (
       <>
-        <div className="warehouse__header">
-          <h1>Locations</h1>
-          <input type="text" placeholder="Search" className="search" />
+        <Navbar routeProps={this.props.routeProps} />
+        <div className="locationlist__container">
+          <div className="locationlist__wrapper">
+            <h1 className="location__font">Locations</h1>
+            <input type="text" placeholder="Search" className="search" />
+          </div>
+          <table className="Locationtable">
+            <tbody>
+              <tr>
+                <th>WAREHOUSE</th>
+                <th>CONTACT</th>
+                <th>CONTACT INFORMATION</th>
+                <th>CATEGORIES</th>
+              </tr>
+            </tbody>
+            <tbody>{rows}</tbody>
+          </table>
         </div>
-        <table>
-          <tr>
-            <th>WAREHOUSE</th>
-            <th>CONTACT</th>
-            <th>CONTACT INFORMATION</th>
-            <th>CATEGORIES</th>
-          </tr>
-          <tbody>{rows}</tbody>
-        </table>
       </>
     )
   }
