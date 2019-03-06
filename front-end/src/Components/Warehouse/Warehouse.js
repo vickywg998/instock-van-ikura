@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import rightArrow from '../../Assets/Icons/Icon-arrow-right.svg'
 
 export default function Warehouse(props) {
@@ -25,7 +26,9 @@ export default function Warehouse(props) {
           </div>
         </div>
         <div className="location__arrow">
-          <img src={rightArrow} alt="arrow-right" />
+          <Link to="/warehouses/:id">
+            <img src={rightArrow} alt="arrow-right" />
+          </Link>
         </div>
       </div>
       <hr className="location__hr" />
