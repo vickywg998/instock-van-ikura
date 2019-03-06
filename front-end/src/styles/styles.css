@@ -56,7 +56,7 @@ body {
 }
 
 td {
-  border-bottom: 2px solid #afafaf;
+  border-bottom: 2px solid #AFAFAF;
   text-align: left;
   padding: 24px 0px;
   font-size: 16px;
@@ -115,7 +115,6 @@ input.search {
   background-position: 5% 50%;
   text-indent: 20px;
 }
-<<<<<<< HEAD
 
 @media only screen and (min-width: 200px) and (max-width: 767px) {
   #card table th {
@@ -147,12 +146,20 @@ input.search {
     width: 100%;
   }
   td:last-child {
-    display: none;
+    display: none !important;
   }
   td:nth-child(5) {
-    border-bottom: 2px solid #AFAFAF;
+    border-bottom: 2px solid #AFAFAF !important;
   }
 }
-=======
->>>>>>> 502c883d46dfdfafaa09e04ef342b335f6309aa5
+
+input.search {
+  padding: 16px;
+  border-radius: 8px;
+  height: 25px;
+  background-image: url("../Assets/Icons/Icon-search.svg");
+  background-repeat: no-repeat;
+  background-position: 5% 50%;
+  text-indent: 20px;
+}
 /*# sourceMappingURL=styles.css.map */
