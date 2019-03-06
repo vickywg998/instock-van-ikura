@@ -54,12 +54,9 @@ router.post('/', (req, res) => {
   fs.writeFile(LOCATION__DATA__FILE, JSON.stringify(locationList), (err) => {
     if (err) {
       console.log('Error writing to file:' , err)
-      callback({
-        success: false,
-        msg: "Error updating data."
-      })
+      
     } else {
-      callback(data)
+   return;
     };
     console.log("Warehouse has been added");
 });

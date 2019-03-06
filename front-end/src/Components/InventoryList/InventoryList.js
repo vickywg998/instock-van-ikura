@@ -1,6 +1,7 @@
 import React from 'react'
 import InventoryItem from '../InventoryItem/InventoryItem'
 
+
 class InventoryList extends React.Component {
   constructor() {
     super()
