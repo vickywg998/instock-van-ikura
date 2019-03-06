@@ -22,6 +22,12 @@
   }
 }
 
+@media only screen and (min-width: 1440px) {
+  .location__container {
+    margin: 0 180px;
+  }
+}
+
 .location__header {
   margin: 32px 0;
 }
@@ -118,7 +124,7 @@
 
 @media only screen and (min-width: 1440px) {
   .location__section {
-    min-width: 300px;
+    min-width: 250px;
   }
 }
 
@@ -138,5 +144,13 @@
   background-repeat: no-repeat;
   background-position: 5% 50%;
   text-indent: 20px;
+}
+
+.location__add--btn {
+  background-color: blue;
+  padding: 20px;
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
 }
 /*# sourceMappingURL=Warehouses.css.map */
