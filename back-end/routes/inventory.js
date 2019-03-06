@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
-const bodyParser= require('body-parser');
-const uuid= require('uuid')
+const bodyParser = require('body-parser');
+const uuid = require('uuid')
 const inventoryList = require('../data/inventory.json')
 const INVENTORY__DATA__FILE = './data/inventory.json'
 const fs = require('fs')
@@ -34,16 +34,27 @@ router.post('/', (req, res) => {
     if (err) {
       console.error(err);
       return;
-  };
-  console.log("Inventory Item has been added");
-});
-    
+    };
+    console.log("Inventory Item has been added");
+  });
 
-  if (!inventoryItemDetail.item || !inventoryItemDetail.description || !inventoryItemDetail.lastOrdered|| !inventoryItemDetail.location|| !inventoryItemDetail.quantity|| !inventoryItemDetail.status) { 
+  if (!inventoryItemDetail.item || !inventoryItemDetail.description || !inventoryItemDetail.lastOrdered || !inventoryItemDetail.location || !inventoryItemDetail.quantity || !inventoryItemDetail.status) {
     return res.status(400).send("Please fill in the blank");
   }
   res.json(inventoryList)
 });
 
+
+//Return single inventory item based on /:id 
+
+router.get('/:id', (req, res) => {
+  let singleItem = inventoryList.findIndex(item => {
+    return item.id === req.params.id
+  })
+
+  if (singleItem !== -1) { res.send(inventoryList[singleItem]) }
+  else { res.send("No item found") }
+})
+B
 module.exports = router
 
