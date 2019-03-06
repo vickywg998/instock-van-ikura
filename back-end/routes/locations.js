@@ -3,7 +3,7 @@ const router = express.Router()
 const locationList = require('../data/locations.json')
 const bodyParser = require('body-parser')
 
-const LOCATION__DATA__FILE = __dirname + '/data/locations.json'
+const LOCATION__DATA__FILE = './data/locations.json'
 const fs = require('fs')
 router.use(bodyParser.json())
 router.use(express.static('website'));
@@ -53,13 +53,12 @@ router.post('/', (req, res) => {
   locationList.push(warehouseDetail)
   fs.writeFile(LOCATION__DATA__FILE, JSON.stringify(locationList), (err) => {
     if (err) {
-      console.log('Error writing to file:' , err)
-      
-    } else {
-   return;
-    };
-    console.log("Warehouse has been added");
+      console.error('Error writing to file:', err);
+      return;
+  };
+  console.log("Warehouse has been added");
 });
+   
 
   if (!warehouseDetail.id || !warehouseDetail.name || !warehouseDetail.address || !warehouseDetail.managerName|| !warehouseDetail.managerTitle|| !warehouseDetail.phone || !warehouseDetail.name || !warehouseDetail.categories || !warehouseDetail.inventory) { 
     return res.status(400).send("Please fill in the blank");
