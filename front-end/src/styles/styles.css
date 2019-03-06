@@ -9,19 +9,22 @@ body {
   font-family: "Avenir Next", sans-serif;
 }
 
-.inventory__font {
+.inventory__font,
+.location__font {
   padding-bottom: 16px;
 }
 
 @media only screen and (min-width: 768px) {
-  .inventorylist__container {
+  .inventorylist__container,
+  .locationlist__container {
     padding: 80px 24px 0px 24px;
     /*delete 80px when navbar is added*/
   }
 }
 
 @media only screen and (min-width: 1440px) {
-  .inventorylist__container {
+  .inventorylist__container,
+  .locationlist__container {
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -35,7 +38,8 @@ body {
   }
 }
 
-.inventorylist__wrapper {
+.inventorylist__wrapper,
+.locationlist__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -50,7 +54,8 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
-  .inventorylist__wrapper {
+  .inventorylist__wrapper,
+  .locationlist__wrapper {
     padding: 0px 16px;
   }
 }
@@ -69,7 +74,8 @@ td {
   font-weight: normal;
 }
 
-table.Inventorytable {
+table.Inventorytable,
+table.Locationtable {
   border-collapse: collapse;
   width: 100%;
 }
@@ -146,10 +152,10 @@ input.search {
     width: 100%;
   }
   td:last-child {
-    display: none;
+    display: none !important;
   }
   td:nth-child(5) {
-    border-bottom: 2px solid #AFAFAF;
+    border-bottom: 2px solid #afafaf;
   }
 }
 
