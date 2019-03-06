@@ -155,8 +155,7 @@ input.search {
     display: none !important;
   }
   td:nth-child(5) {
-    border-bottom: 2px solid #afafaf;
+    border-bottom: 2px solid #afafaf !important;
   }
 }
-
 /*# sourceMappingURL=styles.css.map */
