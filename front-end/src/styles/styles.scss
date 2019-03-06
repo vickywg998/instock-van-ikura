@@ -36,6 +36,8 @@ body {
   color: #999999;
 }
 
+
+
 .inventory__font,
 .location__font {
   padding-bottom: 16px;
@@ -57,6 +59,7 @@ body {
   @media only screen and (max-width: $tablet-breakpt) {
     padding: 0px 16px;
   }
+
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -64,19 +67,25 @@ body {
 }
 
 td {
+
   border-bottom: 2px solid #afafaf;
+
   text-align: left;
   padding: 24px 0px;
   @include h3-font;
+
+
 }
 .description__font {
   @include h4-font;
   font-weight: normal;
 }
+
 table.Inventorytable,
 table.Locationtable {
   border-collapse: collapse;
   width: 100%;
+
 }
 
 th {
@@ -88,14 +97,29 @@ td:first-child {
   font-weight: bold;
 }
 
+td:last-child {
+}
+
 .search {
   border: 1px solid grey;
   min-width: 252px;
+  height: 48px;
+
+
+.search {
+  border: 1px solid grey;
+  min-width: 252px;
+
 }
 
 ::placeholder {
   color: black;
+
 } 
+
+
+}
+
 
 input.search {
   padding: 16px;
@@ -120,10 +144,12 @@ input.search {
   #card table td {
     padding: 12px;
     display: block;
+
     width: 100%;
     border-bottom: none;
     @include h4-font;
   }
+
 
   #card table td::before {
     content: attr(data-label);
@@ -142,9 +168,10 @@ input.search {
   display: none !important;
   }
   td:nth-child(5) {
+
     border-bottom: 2px solid #AFAFAF !important;
     }
-  
+
   }
 
 
@@ -157,3 +184,4 @@ input.search {
   background-position: 5% 50%;
   text-indent: 20px;
 }
+

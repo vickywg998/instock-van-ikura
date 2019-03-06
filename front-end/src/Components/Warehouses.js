@@ -115,6 +115,7 @@ class Warehouses extends Component {
     })
     return (
 
+      <>
       <Navbar routeProps={this.props.routeProps}/>
       <div className="locationlist__container">
         <div className="locationlist__wrapper">
@@ -133,6 +134,8 @@ class Warehouses extends Component {
           <tbody>{rows}</tbody>
         </table>
       </div>
+      </>
+
     )
   }
 }

@@ -97,6 +97,7 @@ class InventoryList extends React.Component {
         />
       )
     })
+
     return (
       <table className="Inventorytable">
         <tbody>
@@ -112,6 +113,7 @@ class InventoryList extends React.Component {
         <tbody>{rows}</tbody>
       </table>
     )
+
   }
 }
 
