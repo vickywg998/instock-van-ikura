@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Navbar from './Navbar/Navbar'
 import Warehouse from './Warehouse'
 
 class Warehouses extends Component {
@@ -114,6 +115,7 @@ class Warehouses extends Component {
     })
     return (
       <>
+        <Navbar routeProps={this.props.routeProps}/>
         <div className="warehouse__header">
           <h1>Locations</h1>
           <input type="text" placeholder="Search" className="search" />
