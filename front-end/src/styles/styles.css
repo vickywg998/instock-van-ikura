@@ -9,19 +9,26 @@ body {
   font-family: "Avenir Next", sans-serif;
 }
 
-.inventory__font {
+
+.inventory__font,
+.location__font {
   padding-bottom: 16px;
 }
 
 @media only screen and (min-width: 768px) {
-  .inventorylist__container {
+
+  .inventorylist__container,
+  .locationlist__container {
     padding: 80px 24px 0px 24px;
     /*delete 80px when navbar is added*/
   }
 }
 
 @media only screen and (min-width: 1440px) {
-  .inventorylist__container {
+
+  .inventorylist__container,
+  .locationlist__container {
+
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -35,7 +42,10 @@ body {
   }
 }
 
-.inventorylist__wrapper {
+
+.inventorylist__wrapper,
+.locationlist__wrapper {
+
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -50,7 +60,10 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
-  .inventorylist__wrapper {
+
+  .inventorylist__wrapper,
+  .locationlist__wrapper {
+
     padding: 0px 16px;
   }
 }
@@ -69,7 +82,10 @@ td {
   font-weight: normal;
 }
 
-table.Inventorytable {
+
+table.Inventorytable,
+table.Locationtable {
+
   border-collapse: collapse;
   width: 100%;
 }
@@ -115,9 +131,7 @@ input.search {
   background-position: 5% 50%;
   text-indent: 20px;
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
 
 @media only screen and (min-width: 200px) and (max-width: 767px) {
   #card table th {
@@ -149,13 +163,10 @@ input.search {
     width: 100%;
   }
   td:last-child {
-    display: none;
+    display: none !important;
   }
   td:nth-child(5) {
-    border-bottom: 2px solid #AFAFAF;
+    border-bottom: 2px solid #afafaf;
   }
 }
-=======
->>>>>>> 502c883d46dfdfafaa09e04ef342b335f6309aa5
->>>>>>> 175112c1736ae7d85ea1c592966e47556ed9b634
 /*# sourceMappingURL=styles.css.map */

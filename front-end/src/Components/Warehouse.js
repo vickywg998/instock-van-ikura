@@ -3,22 +3,27 @@ import React from 'react'
 export default function Warehouse(props) {
   return (
     <tr>
-      <td className="warehouse">
+
+
+      <td data-label="WAREHOUSE">
+
         {props.name}
         <br />
         <p className="description__font">{props.address}</p>
       </td>
-      <td className="warehouse__contact">
+      <td data-label="CONTACT">
+
         {props.managerName}
         <br />
         {props.managerTitle}
       </td>
-      <td className="warehouse__contact--info">
+
+      <td data-label="CONTACT INFORMATION">
         {props.phone}
         <br />
         {props.email}
       </td>
-      <td className="warehouse__categories">{props.categories}</td>
+      <td data-label="CATEGORIES">{props.categories}</td>
     </tr>
   )
 }

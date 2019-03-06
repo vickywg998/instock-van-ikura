@@ -36,25 +36,30 @@ body {
   color: #999999;
 }
 
-<<<<<<< HEAD
-.inventory__font {
+
+
+.inventory__font,
+.location__font {
   padding-bottom: 16px;
 }
-.inventorylist__container {
+.inventorylist__container,
+.locationlist__container {
   @media only screen and (min-width: $tablet-breakpt) {
-    padding: 80px 24px 0px 24px; /*delete 80px when navbar is added*/ 
-    }
-    @media only screen and (min-width: $desktop-breakpt) {
-width: 100%;
-display: flex;
-flex-flow: column wrap;
-padding: 80px 180px 0px 180px; /*delete 80px when navbar is added*/ 
+    padding: 80px 24px 0px 24px; /*delete 80px when navbar is added*/
+  }
+  @media only screen and (min-width: $desktop-breakpt) {
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    padding: 80px 180px 0px 180px; /*delete 80px when navbar is added*/
+  }
 }
-}
-.inventorylist__wrapper {
+.inventorylist__wrapper,
+.locationlist__wrapper {
   @media only screen and (max-width: $tablet-breakpt) {
     padding: 0px 16px;
-    }
+  }
+
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -63,24 +68,8 @@ padding: 80px 180px 0px 180px; /*delete 80px when navbar is added*/
 
 td {
 
-  border-bottom: 2px solid #AFAFAF;
-=======
-.inventorylist__container {
-  width: 100%;
-  display: flex;
-  flex-flow: column wrap;
-  padding: 80px 180px 0px 180px; /*delete 80px when navbar is added*/
-  .inventorylist__wrapper {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    padding-bottom: 48px;
-  }
-}
-
-td {
   border-bottom: 2px solid #afafaf;
->>>>>>> 502c883d46dfdfafaa09e04ef342b335f6309aa5
+
   text-align: left;
   padding: 24px 0px;
   @include h3-font;
@@ -91,9 +80,12 @@ td {
   @include h4-font;
   font-weight: normal;
 }
-table.Inventorytable {
+
+table.Inventorytable,
+table.Locationtable {
   border-collapse: collapse;
-  width:100%;
+  width: 100%;
+
 }
 
 th {
@@ -104,13 +96,7 @@ th {
 td:first-child {
   font-weight: bold;
 }
-<<<<<<< HEAD
 
-.search {
-border: 1px solid grey;
-min-width: 252px;
-
-=======
 td:last-child {
 }
 
@@ -118,75 +104,67 @@ td:last-child {
   border: 1px solid grey;
   min-width: 252px;
   height: 48px;
->>>>>>> 502c883d46dfdfafaa09e04ef342b335f6309aa5
+
+
+.search {
+  border: 1px solid grey;
+  min-width: 252px;
+
 }
 
 ::placeholder {
   color: black;
-<<<<<<< HEAD
-} 
 
-  input.search {
-    padding:16px;
-    border-radius: 8px;
-    height: 48px;
-    background-image: url('../Assets/Icons/Icon-search.svg');
-    background-repeat: no-repeat;
-    background-position:5% 50%;
-    text-indent: 20px;
-}
-
-
-@media only screen and (min-width:200px) and (max-width: 767px) {
-
-  #card table th {
-    display: none;
-  }
-  
-  #card table tr{
-    display:block;
-    margin-bottom:20px;
-  }
-  
-  #card table td  {
-    padding: 12px;
-    display: block; 
-    width: 100%;
-    border-bottom: none;
-    @include h4-font;
-  }
-  
-  #card table td::before {
-  content: attr(data-label);
-  float: left;
-  padding-bottom: 16px;
-  width: 100%;
-  @include h5-font;
-  font-weight: bold;
-  }
-  
-  form {
-    width: 100%;
-  }
-  
-  td:last-child {
-  display: none;
-  }
-  td:nth-child(5) {
-    border-bottom: 2px solid #AFAFAF;
-    }
-  
-  }
-=======
 }
 
 input.search {
   padding: 16px;
   border-radius: 8px;
-  height: 25px;
+  height: 48px;
   background-image: url("../Assets/Icons/Icon-search.svg");
   background-repeat: no-repeat;
   background-position: 5% 50%;
   text-indent: 20px;
 }
->>>>>>> 502c883d46dfdfafaa09e04ef342b335f6309aa5
+
+@media only screen and (min-width: 200px) and (max-width: 767px) {
+  #card table th {
+    display: none;
+  }
+
+  #card table tr {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  #card table td {
+    padding: 12px;
+    display: block;
+
+    width: 100%;
+    border-bottom: none;
+    @include h4-font;
+  }
+
+
+  #card table td::before {
+    content: attr(data-label);
+    float: left;
+    padding-bottom: 16px;
+    width: 100%;
+    @include h5-font;
+    font-weight: bold;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  td:last-child {
+    display: none !important;
+  }
+  td:nth-child(5) {
+    border-bottom: 2px solid #afafaf !important;
+  }
+}
+
