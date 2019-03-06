@@ -36,10 +36,12 @@ body {
   color: #999999;
 }
 
-.inventory__font {
+.inventory__font,
+.location__font {
   padding-bottom: 16px;
 }
-.inventorylist__container {
+.inventorylist__container,
+.locationlist__container {
   @media only screen and (min-width: $tablet-breakpt) {
     padding: 80px 24px 0px 24px; /*delete 80px when navbar is added*/
   }
@@ -50,7 +52,8 @@ body {
     padding: 80px 180px 0px 180px; /*delete 80px when navbar is added*/
   }
 }
-.inventorylist__wrapper {
+.inventorylist__wrapper,
+.locationlist__wrapper {
   @media only screen and (max-width: $tablet-breakpt) {
     padding: 0px 16px;
   }
@@ -70,7 +73,8 @@ td {
   @include h4-font;
   font-weight: normal;
 }
-table.Inventorytable {
+table.Inventorytable,
+table.Locationtable {
   border-collapse: collapse;
   width: 100%;
 }
@@ -135,7 +139,7 @@ input.search {
   }
 
   td:last-child {
-    display: none;
+    display: none !important;
   }
   td:nth-child(5) {
     border-bottom: 2px solid #afafaf;
