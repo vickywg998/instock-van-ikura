@@ -12,14 +12,14 @@ class App extends Component {
       <div className="App">
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/warehouses" component={Warehouses} />
           <Route
-            path="/warehouses/:id"
-            component={WarehouseDetails}
-            // render={routeProps => {
-            //   return <WarehouseDetails routeProps={routeProps.match} />
-            // }}
+            exact
+            path="/warehouses"
+            render={routeProps => {
+              return <Warehouses routeProps={routeProps.match} />
+            }}
           />
+          <Route path="/warehouses/:id" component={WarehouseDetails} />
           <Route
             path="/inventory"
             render={routeProps => {
