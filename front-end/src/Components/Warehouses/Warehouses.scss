@@ -40,6 +40,9 @@ $break-desktop: 1440px;
   @media only screen and (min-width: $break-tablet) {
     margin: 0 24px;
   }
+  @media only screen and (min-width: $break-desktop) {
+    margin: 0 180px;
+  }
 }
 
 .location__header {
@@ -99,7 +102,7 @@ $break-desktop: 1440px;
     max-width: 300px;
   }
   @media only screen and (min-width: $break-desktop) {
-    min-width: 300px;
+    min-width: 250px;
   }
 }
 
