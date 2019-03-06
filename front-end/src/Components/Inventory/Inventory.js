@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import InventoryList from '../InventoryList/InventoryList'
 import Navbar from '../Navbar/Navbar'
 
+
 class Inventory extends Component {
   render() {
     return (
