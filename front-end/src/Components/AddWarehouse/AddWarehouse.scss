@@ -43,6 +43,7 @@
   }
   .btn-action {
     height: 48px;
+    cursor: pointer;
     @media only screen and (min-width: $break-tablet) {
       width: 160px;
     }
