@@ -48,19 +48,27 @@ router.post('/', (req, res) => {
         "quantity": "12,000",
         "status": "In Stock"
       }]
-    }
-    
+  }
+
   locationList.push(warehouseDetail)
   fs.writeFile(LOCATION__DATA__FILE, JSON.stringify(locationList), (err) => {
     if (err) {
       console.error('Error writing to file:', err);
       return;
-  };
-  console.log("Warehouse has been added");
-});
-   
+    };
+    console.log("Warehouse has been added");
+  });
 
-  if (!warehouseDetail.id || !warehouseDetail.name || !warehouseDetail.address || !warehouseDetail.managerName|| !warehouseDetail.managerTitle|| !warehouseDetail.phone || !warehouseDetail.name || !warehouseDetail.categories || !warehouseDetail.inventory) { 
+
+  if (!warehouseDetail.id ||
+    !warehouseDetail.name ||
+    !warehouseDetail.address ||
+    !warehouseDetail.managerName ||
+    !warehouseDetail.managerTitle ||
+    !warehouseDetail.phone ||
+    !warehouseDetail.name ||
+    !warehouseDetail.categories ||
+    !warehouseDetail.inventory) {
     return res.status(400).send("Please fill in the blank");
   }
   res.json(locationList)
