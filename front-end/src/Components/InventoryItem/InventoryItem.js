@@ -3,7 +3,6 @@ import dot from '../../Assets/Icons/Icon-kebab-default.svg'
 import { Link } from 'react-router-dom'
 import "./inventoryItem.css"
 
-
 class InventoryItem extends React.Component {
 
   toggleClass = () => {
@@ -16,12 +15,15 @@ class InventoryItem extends React.Component {
 
   render() {
     return (
-      <tr>
+
         <td data-label="ITEM">
-          {this.props.data.item}
+        <Link id="link__color--black" to={`/inventory/${props.data.id}`}>
+          {props.data.item}
           <br />
-          <p className="description__font">{this.props.data.description}</p>
+          <p className="description__font">{props.data.description}</p>
+          </Link>
         </td>
+
         <td data-label="LAST ORDERED">{this.props.data.lastOrdered}</td>
         <td data-label="LOCATION">{this.props.data.location}</td>
         <td data-label="QUANTITY">{this.props.data.quantity}</td>
@@ -41,3 +43,4 @@ class InventoryItem extends React.Component {
 
 
 export default InventoryItem
+

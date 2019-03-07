@@ -5,6 +5,7 @@ import Inventory from './Components/Inventory/Inventory'
 import Home from './Components/Home/Home'
 import Warehouses from './Components/Warehouses/Warehouses'
 import WarehouseDetails from './Components/WarehouseDetails/WarehouseDetails'
+import InventoryItemDetail from './Components/InventoryItemDetail/InventoryItemDetail'
 
 class App extends Component {
   render() {
@@ -21,12 +22,13 @@ class App extends Component {
           />
           <Route path="/warehouses/:id" component={WarehouseDetails} />
           <Route
+            exact
             path="/inventory"
             render={routeProps => {
               return <Inventory routeProps={routeProps.match} />
             }}
           />
-          <Route path="/inventory/:id" component={Inventory} />
+          <Route path="/inventory/:id" component={InventoryItemDetail} />
         </Switch>
       </div>
     )

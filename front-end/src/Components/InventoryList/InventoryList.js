@@ -1,5 +1,6 @@
 import React from 'react'
 import InventoryItem from '../InventoryItem/InventoryItem'
+import './InventoryList.scss'
 import axios from 'axios'
 
 class InventoryList extends React.Component {
