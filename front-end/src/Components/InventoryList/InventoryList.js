@@ -1,88 +1,26 @@
 import React from 'react'
 import InventoryItem from '../InventoryItem/InventoryItem'
 import './InventoryList.scss'
+import axios from 'axios'
 
 class InventoryList extends React.Component {
   constructor() {
     super()
     this.state = {
-      data: [
-        {
-          item: 'Product Name Here',
-          description: 'Here is a very brief description of the product…',
-          lastOrdered: '05/24/2018',
-          location: 'Toronto, CAN',
-          quantity: '12,000',
-          status: 'In Stock',
-        },
-        {
-          item: 'Product Name Here',
-          description: 'Here is a very brief description of the product…',
-          lastOrdered: '05/24/2018',
-          location: 'Toronto, CAN',
-          quantity: '12,000',
-          status: 'Out of Stock',
-        },
-        {
-          item: 'Product Name Here',
-          description: 'Here is a very brief description of the product…',
-          lastOrdered: '05/24/2018',
-          location: 'Toronto, CAN',
-          quantity: '12,000',
-          status: 'In Stock',
-        },
-        {
-          item: 'Product Name Here',
-          description: 'Here is a very brief description of the product…',
-          lastOrdered: '05/24/2018',
-          location: 'Toronto, CAN',
-          quantity: '12,000',
-          status: 'Out of Stock',
-        },
-        {
-          item: 'Product Name Here',
-          description: 'Here is a very brief description of the product…',
-          lastOrdered: '05/24/2018',
-          location: 'Toronto, CAN',
-          quantity: '12,000',
-          status: 'In Stock',
-        },
-        {
-          item: 'Product Name Here',
-          description: 'Here is a very brief description of the product…',
-          lastOrdered: '05/24/2018',
-          location: 'Toronto, CAN',
-          quantity: '12,000',
-          status: 'Out of Stock',
-        },
-        {
-          item: 'Product Name Here',
-          description: 'Here is a very brief description of the product…',
-          lastOrdered: '05/24/2018',
-          location: 'Toronto, CAN',
-          quantity: '12,000',
-          status: 'In Stock',
-        },
-        {
-          item: 'Product Name Here',
-          description: 'Here is a very brief description of the product…',
-          lastOrdered: '05/24/2018',
-          location: 'Toronto, CAN',
-          quantity: '12,000',
-          status: 'Out of Stock',
-        },
-
-        {
-          item: 'Product Name Here',
-          description: 'Here is a very brief description of the product…',
-          lastOrdered: '05/24/2018',
-          location: 'Toronto, CAN',
-          quantity: '12,000',
-          status: 'Out of Stock',
-        },
-      ],
+      data: []
     }
   }
+
+  componentDidMount() {
+    axios.get("http://localhost:8080/inventory/")
+      .then(response => {
+        this.setState({
+          data: response.data
+        })
+        console.log(this.state.data)
+      })
+  }
+
   render() {
     let rows = this.state.data.map((item, i) => {
       return (

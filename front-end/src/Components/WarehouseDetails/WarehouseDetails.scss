@@ -2,6 +2,12 @@
 
 .locationDetails__top {
   margin: 0 16px;
+  @media only screen and (min-width: $break-tablet) {
+    margin: 0 24px;
+  }
+  @media only screen and (min-width: $break-desktop) {
+    margin: 0 180px;
+  }
 }
 
 .locationDetails h1 {
@@ -63,6 +69,11 @@
   @media only screen and (min-width: $break-tablet) {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 24px;
+  }
+  @media only screen and (min-width: $break-desktop) {
+    margin: 0 180px;
   }
 }
 
@@ -75,10 +86,19 @@
   @media only screen and (min-width: $break-tablet) {
     max-width: 210px;
   }
+  @media only screen and (min-width: $break-desktop) {
+    max-width: 405px;
+  }
 }
 
 .locationDetails hr {
-  margin-top: 24px;
+  margin: 24px 16px 0 16px;
+  @media only screen and (min-width: $break-tablet) {
+    margin: 24px 24px 0 24px;
+  }
+  @media only screen and (min-width: $break-desktop) {
+    margin: 24px 180px 0 180px;
+  }
 }
 
 #locationDetails__kebab {

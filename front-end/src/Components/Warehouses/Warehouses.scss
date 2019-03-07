@@ -40,6 +40,9 @@ $break-desktop: 1440px;
   @media only screen and (min-width: $break-tablet) {
     margin: 0 24px;
   }
+  @media only screen and (min-width: $break-desktop) {
+    margin: 0 180px;
+  }
 }
 
 .location__header {
@@ -99,7 +102,7 @@ $break-desktop: 1440px;
     max-width: 300px;
   }
   @media only screen and (min-width: $break-desktop) {
-    min-width: 300px;
+    min-width: 250px;
   }
 }
 
@@ -119,4 +122,19 @@ $break-desktop: 1440px;
   background-repeat: no-repeat;
   background-position: 5% 50%;
   text-indent: 20px;
+}
+
+.location__add {
+  position: fixed;
+  z-index: 1000;
+  left: 70%;
+  top: 85%;
+}
+
+.location__add--btn {
+  background-color: rgb(8, 74, 144);
+  padding: 20px;
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
 }

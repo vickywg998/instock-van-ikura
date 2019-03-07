@@ -96,10 +96,10 @@ input.search {
   .card table td {
     padding: 12px 0px;
     display: block;
-
     width: 100%;
     border-bottom: none;
     @include h4-font;
+    text-decoration: none;
   }
 
   .card table td::before {
@@ -109,6 +109,7 @@ input.search {
     width: 100%;
     @include h5-font;
     font-weight: bold;
+    text-decoration: none;
   }
 
   form {

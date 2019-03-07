@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import rightArrow from '../../Assets/Icons/Icon-arrow-right.svg'
 
-export default function Warehouse(props) {
+const Warehouse = props => {
   return (
     <>
       <div className="location">
@@ -35,3 +35,5 @@ export default function Warehouse(props) {
     </>
   )
 }
+
+export default Warehouse

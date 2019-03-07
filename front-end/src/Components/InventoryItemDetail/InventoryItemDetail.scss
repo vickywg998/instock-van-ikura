@@ -1,0 +1,133 @@
+@import "../Inventory/Inventory.scss";
+
+.inventoryDetail__container {
+  display: flex;
+  flex-direction: column;
+  
+  margin: 0 16px;
+  @media only screen and (min-width: $tablet-breakpt) {
+    margin: 0 24px;
+  }
+  @media only screen and (min-width: $desktop-breakpt) {
+    margin: 0 180px;
+  }
+}
+
+.inventoryDetails h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.inventoryDetails h4 {
+  @include h4-font;
+  font-weight: normal;
+}
+
+.inventoryDetails h5 {
+  @include h5-font;
+  font-weight: 600;
+}
+
+.inventoryDetail__font--wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 32px 0;
+  
+  
+}
+
+.inventoryDetail__font {
+  padding:0px 24px;
+}
+
+#instock__button {
+  background-color :#2eb82e;
+  border-radius:5px;
+ width: 88px;
+ padding: 5px;
+ font-weight: bold;
+ color: white;
+  
+}
+
+
+.inventoryDetail__wrapper {
+  display: flex;
+  flex-direction: row;
+ padding: 40px 0px 48px 0px;
+ border-top: 1.5px solid #afafaf;
+ border-bottom: 1.5px solid #afafaf;
+  @media only screen and (max-width: $tablet-breakpt) {
+    flex-direction: column;
+  }
+  @media only screen and (min-width: 200px) {
+    border-top: none;
+    border-bottom: none;
+    padding: 0px;
+  }
+}
+
+
+.inventoryDetail__section--wrapper {
+  display: flex;
+
+}
+
+
+
+.inventoryDetail__top--section {
+  margin-bottom: 24px;
+  max-width: 300px;
+  @media only screen and (min-width: $tablet-breakpt) {
+    margin-right: 5%;
+  }
+  
+}
+
+.inventoryDetail__top--section:first-child {
+  margin-bottom: 24px;
+  max-width: 450px;
+  @media only screen and (min-width: $tablet-breakpt) {
+    margin-right: 5%;
+  }
+  @media only screen and (min-width: $phone-breakpt) {
+    margin-bottom: 0;
+  }
+  
+}
+
+.inventoryDetails__label {
+  margin-bottom: 12px;
+}
+.inventoryDetails__body--top {
+  margin-bottom: 36px;
+}
+
+.inventoryDetail__wrapper--edit {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+
+  @media only screen and (min-width: $tablet-breakpt) {
+    flex-direction: row;
+  }
+}
+
+button#inventoryDetail__edit--button {
+  margin-top: 40px;
+  background-color: #004892;
+  min-width: 160px;
+  padding: 10px 5px;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+
+  @media only screen and (max-width: $phone-breakpt) {
+    width: 100%;
+    margin-top: 0;
+    height: 50px;
+  }
+  
+}
+  

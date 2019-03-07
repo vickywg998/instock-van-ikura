@@ -91,6 +91,7 @@ input.search {
     border-bottom: none;
     font-size: 14px;
     line-height: 22px;
+    text-decoration: none;
   }
   .card table td::before {
     content: attr(data-label);
@@ -101,6 +102,7 @@ input.search {
     line-height: 20px;
     color: #999999;
     font-weight: bold;
+    text-decoration: none;
   }
   form {
     width: 100%;
