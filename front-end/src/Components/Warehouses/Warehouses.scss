@@ -125,16 +125,24 @@ $break-desktop: 1440px;
 }
 
 .location__add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
-  z-index: 1000;
-  left: 70%;
-  top: 85%;
+  left: 70vw;
+  top: 85vh;
+  background-color: #004892;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  @media only screen and (min-width: $break-tablet) {
+    left: 80vw;
+    top: 85vh;
+  }
 }
 
 .location__add--btn {
-  background-color: rgb(8, 74, 144);
-  padding: 20px;
-  border-radius: 50%;
-  width: 75px;
-  height: 75px;
+  width: 20px;
+  height: 20px;
 }

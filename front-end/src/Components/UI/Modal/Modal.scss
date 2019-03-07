@@ -2,12 +2,14 @@
   position: fixed;
   z-index: 500;
   background-color: white;
-  width: 70%;
+  width: 100%;
   border: 1px solid #ccc;
   box-shadow: 1px 1px 1px black;
-  padding: 16px;
-  left: 15%;
-  top: 15%;
+  padding: 0 16px;
+  left: 0%;
+  top: 0%;
+  max-height: calc(100vh);
+  overflow-y: auto;
   box-sizing: border-box;
   transition: all 0.3s ease-out;
 }
