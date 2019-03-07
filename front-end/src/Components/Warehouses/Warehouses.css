@@ -147,17 +147,35 @@
 }
 
 .location__add {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: fixed;
-  z-index: 1000;
-  left: 70%;
-  top: 85%;
+  left: 70vw;
+  top: 85vh;
+  background-color: #004892;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+@media only screen and (min-width: 768px) {
+  .location__add {
+    left: 80vw;
+    top: 85vh;
+  }
 }
 
 .location__add--btn {
-  background-color: #084a90;
-  padding: 20px;
-  border-radius: 50%;
-  width: 75px;
-  height: 75px;
+  width: 20px;
+  height: 20px;
 }
 /*# sourceMappingURL=Warehouses.css.map */
