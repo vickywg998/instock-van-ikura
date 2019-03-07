@@ -146,6 +146,21 @@
   text-indent: 20px;
 }
 
+.location__add {
+  position: fixed;
+  z-index: 1000;
+  left: 70%;
+  top: 85%;
+}
+
+.location__add--btn {
+  background-color: #084a90;
+  padding: 20px;
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+}
+
 .locationDetails__top {
   margin: 0 16px;
 }
