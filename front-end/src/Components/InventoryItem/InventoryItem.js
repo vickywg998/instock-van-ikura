@@ -15,12 +15,12 @@ class InventoryItem extends React.Component {
 
   render() {
     return (
-
+<tr>
         <td data-label="ITEM">
-        <Link id="link__color--black" to={`/inventory/${props.data.id}`}>
-          {props.data.item}
+        <Link id="link__color--black" to={`/inventory/${this.props.data.id}`}>
+          {this.props.data.item}
           <br />
-          <p className="description__font">{props.data.description}</p>
+          <p className="description__font">{this.props.data.description}</p>
           </Link>
         </td>
 
