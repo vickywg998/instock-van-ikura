@@ -1,106 +1,30 @@
 import React, { Component } from 'react'
 import Navbar from '../Navbar/Navbar'
 import Warehouse from '../Warehouse/Warehouse'
+import axios from 'axios'
 import AddWarehouse from '../AddWarehouse/AddWarehouse'
 import Modal from '../UI/Modal/Modal'
 import addIcon from '../../Assets/Icons/Icon-add.svg'
 import './Warehouses.scss'
 
+const locationURL = "http://localhost:8080/locations/"
 class Warehouses extends Component {
-  state = {
-    adding: false,
-    data: [
-      {
-        name: 'Warehouse Number 1',
-        address: '469 King St W, Toronto, ON',
-        managerName: 'Mara Weinberg',
-        managerTitle: 'Warehouse Manager',
-        phone: '+1 416 678 2345',
-        email: 'weinberg@instack.com',
-        categories:
-          'Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation',
-      },
-      {
-        name: 'Warehouse Number 1',
-        address: '469 King St W, Toronto, ON',
-        managerName: 'Mara Weinberg',
-        managerTitle: 'Warehouse Manager',
-        phone: '+1 416 678 2345',
-        email: 'weinberg@instack.com',
-        categories:
-          'Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation',
-      },
-      {
-        name: 'Warehouse Number 1',
-        address: '469 King St W, Toronto, ON',
-        managerName: 'Mara Weinberg',
-        managerTitle: 'Warehouse Manager',
-        phone: '+1 416 678 2345',
-        email: 'weinberg@instack.com',
-        categories:
-          'Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation',
-      },
-      {
-        name: 'Warehouse Number 1',
-        address: '469 King St W, Toronto, ON',
-        managerName: 'Mara Weinberg',
-        managerTitle: 'Warehouse Manager',
-        phone: '+1 416 678 2345',
-        email: 'weinberg@instack.com',
-        categories:
-          'Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation',
-      },
-      {
-        name: 'Warehouse Number 1',
-        address: '469 King St W, Toronto, ON',
-        managerName: 'Mara Weinberg',
-        managerTitle: 'Warehouse Manager',
-        phone: '+1 416 678 2345',
-        email: 'weinberg@instack.com',
-        categories:
-          'Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation',
-      },
-      {
-        name: 'Warehouse Number 1',
-        address: '469 King St W, Toronto, ON',
-        managerName: 'Mara Weinberg',
-        managerTitle: 'Warehouse Manager',
-        phone: '+1 416 678 2345',
-        email: 'weinberg@instack.com',
-        categories:
-          'Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation',
-      },
-      {
-        name: 'Warehouse Number 1',
-        address: '469 King St W, Toronto, ON',
-        managerName: 'Mara Weinberg',
-        managerTitle: 'Warehouse Manager',
-        phone: '+1 416 678 2345',
-        email: 'weinberg@instack.com',
-        categories:
-          'Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation',
-      },
-      {
-        name: 'Warehouse Number 1',
-        address: '469 King St W, Toronto, ON',
-        managerName: 'Mara Weinberg',
-        managerTitle: 'Warehouse Manager',
-        phone: '+1 416 678 2345',
-        email: 'weinberg@instack.com',
-        categories:
-          'Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation',
-      },
-      {
-        name: 'Warehouse Number 1',
-        address: '469 King St W, Toronto, ON',
-        managerName: 'Mara Weinberg',
-        managerTitle: 'Warehouse Manager',
-        phone: '+1 416 678 2345',
-        email: 'weinberg@instack.com',
-        categories:
-          'Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation',
-      },
-    ],
+  constructor() {
+    super()
+    this.state = {
+      data: [],
+      adding: false
+    }
+  }
+
+  componentDidMount() {
+    axios.get(locationURL)
+      .then(response => {
+        this.setState({
+          data: response.data
+        })
+        console.log(this.state.data)
+      })
   }
 
   handleAddingLocation = () => {
