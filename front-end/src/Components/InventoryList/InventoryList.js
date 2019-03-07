@@ -16,7 +16,6 @@ class InventoryList extends React.Component {
         this.setState({
           data: response.data
         })
-        console.log(this.state.data)
       })
   }
 
