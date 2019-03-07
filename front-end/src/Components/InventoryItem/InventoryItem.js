@@ -1,23 +1,46 @@
 import React from 'react'
 import dot from '../../Assets/Icons/Icon-kebab-default.svg'
-import {Link} from 'react-router-dom'
-const InventoryItem = props => {
-  return (
-    <tr>
-      <td data-label="ITEM">
-        {props.data.item}
-        <br />
-        <p className="description__font">{props.data.description}</p>
-      </td>
-      <td data-label="LAST ORDERED">{props.data.lastOrdered}</td>
-      <td data-label="LOCATION">{props.data.location}</td>
-      <td data-label="QUANTITY">{props.data.quantity}</td>
-      <td data-label="STATUS">{props.data.status}</td>
-      <td data-label="DOT">
-      <Link to={`inventory/${props.data.id}`}><img src={dot} alt="" /></Link>
-      </td>
-    </tr>
-  )
+import { Link } from 'react-router-dom'
+import "./inventoryItem.css"
+
+class InventoryItem extends React.Component {
+
+  toggleClass = () => {
+    if (this.hide.className === "hide") {
+      this.hide.className = 'show'
+    } else {
+      this.hide.className = "hide"
+    }
+  }
+
+  render() {
+    return (
+
+        <td data-label="ITEM">
+        <Link id="link__color--black" to={`/inventory/${props.data.id}`}>
+          {props.data.item}
+          <br />
+          <p className="description__font">{props.data.description}</p>
+          </Link>
+        </td>
+
+        <td data-label="LAST ORDERED">{this.props.data.lastOrdered}</td>
+        <td data-label="LOCATION">{this.props.data.location}</td>
+        <td data-label="QUANTITY">{this.props.data.quantity}</td>
+        <td data-label="STATUS">{this.props.data.status}</td>
+        <td data-label="DOT">
+          <div className="dropdown">
+          <img src={dot} alt="" onClick={this.toggleClass} className="pointer"/>
+            <div className='hide' ref={self => this.hide = self}>Remove</div>
+          </div>
+
+        </td>
+
+      </tr>
+    )
+  }
 }
 
+
 export default InventoryItem
+

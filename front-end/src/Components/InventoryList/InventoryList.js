@@ -1,6 +1,9 @@
 import React from 'react'
 import InventoryItem from '../InventoryItem/InventoryItem'
+import './InventoryList.scss'
 import axios from 'axios'
+
+const inventoryURL = "http://localhost:8080/inventory/"
 
 class InventoryList extends React.Component {
   constructor() {
@@ -11,12 +14,11 @@ class InventoryList extends React.Component {
   }
 
   componentDidMount() {
-    axios.get("http://localhost:8080/inventory/")
+    axios.get(inventoryURL)
       .then(response => {
         this.setState({
           data: response.data
         })
-        console.log(this.state.data)
       })
   }
 

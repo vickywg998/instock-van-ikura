@@ -1,0 +1,135 @@
+$phone-breakpt: 320px;
+$tablet-breakpt: 768px;
+$desktop-breakpt: 1440px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Avenir Next", sans-serif;
+}
+
+@mixin h1-herofont {
+  font-size: 60px;
+  line-height: 68px;
+}
+
+@mixin h1-font {
+  font-size: 36px;
+  line-height: 44px;
+}
+
+@mixin h3-font {
+  font-size: 16px;
+  line-height: 24px;
+}
+@mixin h4-font {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+@mixin h5-font {
+  font-size: 12px;
+  line-height: 20px;
+  color: #999999;
+}
+
+
+.inventory__font {
+    margin-bottom: 16px;
+}
+
+.inventorylist__container {
+  margin: 0 16px;
+  @media only screen and (min-width: $tablet-breakpt) {
+    margin: 0 24px;
+  }
+}
+
+.inventorylist__wrapper {
+  margin: 32px 0;
+  @media only screen and (min-width: $tablet-breakpt) {
+    margin: 48px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+}
+
+.search {
+  border: 1px solid grey;
+  min-width: 252px;
+  height: 48px;
+
+  .search {
+    border: 1px solid grey;
+    min-width: 252px;
+  }
+
+  ::placeholder {
+    color: black;
+  }
+}
+
+input.search {
+  padding: 16px;
+  border-radius: 8px;
+  height: 48px;
+  background-image: url("../../Assets//Icons/Icon-search.svg");
+  background-repeat: no-repeat;
+  background-position: 5% 50%;
+  text-indent: 20px;
+}
+
+@media only screen and (min-width: 200px) and (max-width: 767px) {
+  .card table th {
+    display: none;
+  }
+
+  .card table tr {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .card table td {
+    padding: 12px 0px;
+    display: block;
+    width: 100%;
+    border-bottom: none;
+    @include h4-font;
+    text-decoration: none;
+  }
+
+  .card table td::before {
+    content: attr(data-label);
+    float: left;
+    padding-bottom: 16px;
+    width: 100%;
+    @include h5-font;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  td:last-child {
+    display: none !important;
+  }
+  td:nth-child(5) {
+    border-bottom: 2px solid #afafaf !important;
+  }
+}
+
+input.search {
+  padding: 16px;
+  border-radius: 8px;
+  height: 25px;
+  background-image: url("../../Assets//Icons/Icon-search.svg");
+  background-repeat: no-repeat;
+  background-position: 5% 50%;
+  text-indent: 20px;
+}

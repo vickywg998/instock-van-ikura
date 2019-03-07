@@ -1,0 +1,26 @@
+
+@import "../Inventory/Inventory.scss";
+
+
+table.Inventorytable {
+  border-collapse: collapse;
+  width:100%;
+}
+
+th {
+  text-align: left;
+  @include h5-font;
+}
+
+@media only screen and (min-width: 200px) and (max-width: 767px) {
+  .card table th {
+    display: none;
+  }
+
+  .card table tr {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+}
+
