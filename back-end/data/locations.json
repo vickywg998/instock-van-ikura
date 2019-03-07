@@ -835,5 +835,47 @@
         "status": "In Stock"
       }
     ]
+  },
+  {
+    "id": "4a8e2ae0-3f97-11e9-b210-d663bd873d93",
+    "name": "Warehouse Number 1",
+    "address": "469 King St W, Toronto, ON",
+    "managerName": "Mara Weinberg",
+    "managerTitle": "Warehouse Manager",
+    "phone": "+1 416 678 2345",
+    "email": "weinberg@instack.com",
+    "categories": "Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation",
+    "inventory": [
+      {
+        "id": "e6f704ba-3f97-11e9-b210-d663bd873d93",
+        "item": "Product Name Here",
+        "description": "Here is a very brief description of the product…",
+        "lastOrdered": "05/24/2018",
+        "location": "Toronto, CAN",
+        "quantity": "12,000",
+        "status": "In Stock"
+      }
+    ]
+  },
+  {
+    "id": "4a8e2ae0-3f97-11e9-b210-d663bd873d93",
+    "name": "Warehouse Number 1",
+    "address": "469 King St W, Toronto, ON",
+    "managerName": "Mara Weinberg",
+    "managerTitle": "Warehouse Manager",
+    "phone": "+1 416 678 2345",
+    "email": "weinberg@instack.com",
+    "categories": "Industrial, Automotive, Heavy, Mechanical, Engineering, Transportation",
+    "inventory": [
+      {
+        "id": "e6f704ba-3f97-11e9-b210-d663bd873d93",
+        "item": "Product Name Here",
+        "description": "Here is a very brief description of the product…",
+        "lastOrdered": "05/24/2018",
+        "location": "Toronto, CAN",
+        "quantity": "12,000",
+        "status": "In Stock"
+      }
+    ]
   }
 ]

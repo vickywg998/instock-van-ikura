@@ -1,9 +1,14 @@
 import React, { Component } from 'react'
-import Navbar from './Navbar/Navbar'
-import Warehouse from './Warehouse'
+import Navbar from '../Navbar/Navbar'
+import Warehouse from '../Warehouse/Warehouse'
+import AddWarehouse from '../AddWarehouse/AddWarehouse'
+import Modal from '../UI/Modal/Modal'
+import addIcon from '../../Assets/Icons/Icon-add.svg'
+import './Warehouses.scss'
 
 class Warehouses extends Component {
   state = {
+    adding: false,
     data: [
       {
         name: 'Warehouse Number 1',
@@ -98,6 +103,16 @@ class Warehouses extends Component {
     ],
   }
 
+  handleAddingLocation = () => {
+    this.setState({ adding: true })
+    console.log(this.state.adding)
+  }
+
+  handleCancelAddingLocation = () => {
+    this.setState({ adding: false })
+    console.log(this.state.adding)
+  }
+
   render() {
     let rows = this.state.data.map((warehouse, i) => {
       return (
@@ -115,23 +130,27 @@ class Warehouses extends Component {
     })
     return (
       <>
+        <Modal
+          show={this.state.adding}
+          closeModal={this.handleCancelAddingLocation}
+        >
+          <AddWarehouse />
+        </Modal>
         <Navbar routeProps={this.props.routeProps} />
-        <div className="locationlist__container">
-          <div className="locationlist__wrapper">
-            <h1 className="location__font">Locations</h1>
+        <div className="location__container">
+          <div className="location__header">
+            <h1 className="location__title">Locations</h1>
             <input type="text" placeholder="Search" className="search" />
           </div>
-          <table className="Locationtable">
-            <tbody>
-              <tr>
-                <th>WAREHOUSE</th>
-                <th>CONTACT</th>
-                <th>CONTACT INFORMATION</th>
-                <th>CATEGORIES</th>
-              </tr>
-            </tbody>
-            <tbody>{rows}</tbody>
-          </table>
+          <div className="locations">{rows}</div>
+          <div className="location__add btn-add">
+            <img
+              className="location__add--btn"
+              src={addIcon}
+              alt="add-button"
+              onClick={this.handleAddingLocation}
+            />
+          </div>
         </div>
       </>
     )

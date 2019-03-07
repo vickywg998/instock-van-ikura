@@ -1,9 +1,9 @@
 const express = require('express')
 const router = express.Router()
-const bodyParser= require('body-parser');
-const uuid= require('uuid')
+const bodyParser = require('body-parser');
+const uuid = require('uuid')
 const inventoryList = require('../data/inventory.json')
-const INVENTORY__DATA__FILE = __dirname + '/data/inventory.json'
+const INVENTORY__DATA__FILE = './data/inventory.json'
 const fs = require('fs')
 router.use(bodyParser.json())
 router.use(express.static('website'));
@@ -32,22 +32,29 @@ router.post('/', (req, res) => {
   inventoryList.push(inventoryItemDetail)
   fs.writeFile(INVENTORY__DATA__FILE, JSON.stringify(inventoryList), (err) => {
     if (err) {
-      console.log('Error writing to file:' , err)
-      callback({
-        success: false,
-        msg: "Error updating data."
-      })
-    } else {
-      callback(data)
+      console.error(err);
+      return;
     };
     console.log("Inventory Item has been added");
-});
+  });
 
-  if (!inventoryItemDetail.item || !inventoryItemDetail.description || !inventoryItemDetail.lastOrdered|| !inventoryItemDetail.location|| !inventoryItemDetail.quantity|| !inventoryItemDetail.status) { 
+  if (!inventoryItemDetail.item || !inventoryItemDetail.description || !inventoryItemDetail.lastOrdered || !inventoryItemDetail.location || !inventoryItemDetail.quantity || !inventoryItemDetail.status) {
     return res.status(400).send("Please fill in the blank");
   }
   res.json(inventoryList)
 });
+
+
+//Return single inventory item based on /:id 
+
+router.get('/:id', (req, res) => {
+  let singleItem = inventoryList.findIndex(item => {
+    return item.id === req.params.id
+  })
+
+  if (singleItem !== -1) { res.send(inventoryList[singleItem]) }
+  else { res.send("No item found") }
+})
 
 module.exports = router
 

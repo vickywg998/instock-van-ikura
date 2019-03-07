@@ -1,0 +1,108 @@
+@import "../Warehouses/Warehouses.scss";
+
+.locationDetails__top {
+  margin: 0 16px;
+  @media only screen and (min-width: $break-tablet) {
+    margin: 0 24px;
+  }
+  @media only screen and (min-width: $break-desktop) {
+    margin: 0 180px;
+  }
+}
+
+.locationDetails h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.locationDetails h4 {
+  @include h4-font;
+  font-weight: normal;
+}
+
+.locationDetails h5 {
+  @include h5-font;
+  font-weight: 600;
+}
+
+.locationDetails__header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 32px 0;
+}
+
+.locationDetails__header img {
+  margin-right: 20px;
+}
+
+.locationDetails__contacts {
+  display: flex;
+  flex-direction: column;
+  @media only screen and (min-width: $break-tablet) {
+    flex-direction: row;
+  }
+}
+
+.locationDetails__top--section {
+  margin-bottom: 24px;
+  max-width: 135px;
+  @media only screen and (min-width: $break-tablet) {
+    margin-right: 25%;
+  }
+}
+
+.locationDetails__label {
+  margin-bottom: 12px;
+}
+.locationDetails__body--top {
+  margin-bottom: 14px;
+}
+
+.locationDetails__inventory--container {
+  background-color: #fafafa;
+}
+
+.locationDetails__inventory {
+  margin: 0 16px;
+  padding-top: 24px;
+  @media only screen and (min-width: $break-tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 24px;
+  }
+  @media only screen and (min-width: $break-desktop) {
+    margin: 0 180px;
+  }
+}
+
+#locationDetails__productName {
+  font-weight: 600;
+}
+
+.locationDetails__inventory--section {
+  margin-bottom: 12px;
+  @media only screen and (min-width: $break-tablet) {
+    max-width: 210px;
+  }
+  @media only screen and (min-width: $break-desktop) {
+    max-width: 405px;
+  }
+}
+
+.locationDetails hr {
+  margin: 24px 16px 0 16px;
+  @media only screen and (min-width: $break-tablet) {
+    margin: 24px 24px 0 24px;
+  }
+  @media only screen and (min-width: $break-desktop) {
+    margin: 24px 180px 0 180px;
+  }
+}
+
+#locationDetails__kebab {
+  @media only screen and (max-width: $break-tablet) {
+    display: none;
+  }
+}

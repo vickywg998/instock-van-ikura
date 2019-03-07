@@ -36,12 +36,10 @@ body {
   color: #999999;
 }
 
-.inventory__font,
-.location__font {
+.inventory__font {
   padding-bottom: 16px;
 }
-.inventorylist__container,
-.locationlist__container {
+.inventorylist__container {
   @media only screen and (min-width: $tablet-breakpt) {
     padding: 80px 24px 0px 24px; /*delete 80px when navbar is added*/
   }
@@ -52,8 +50,7 @@ body {
     padding: 80px 180px 0px 180px; /*delete 80px when navbar is added*/
   }
 }
-.inventorylist__wrapper,
-.locationlist__wrapper {
+.inventorylist__wrapper {
   @media only screen and (max-width: $tablet-breakpt) {
     padding: 0px 16px;
   }
@@ -76,8 +73,7 @@ td {
   font-weight: normal;
 }
 
-table.Inventorytable,
-table.Locationtable {
+table.Inventorytable {
   border-collapse: collapse;
   width: 100%;
 }
@@ -120,16 +116,16 @@ input.search {
 }
 
 @media only screen and (min-width: 200px) and (max-width: 767px) {
-  #card table th {
+  .card table th {
     display: none;
   }
 
-  #card table tr {
+  .card table tr {
     display: block;
     margin-bottom: 20px;
   }
 
-  #card table td {
+  .card table td {
     padding: 12px;
     display: block;
 
@@ -138,7 +134,7 @@ input.search {
     @include h4-font;
   }
 
-  #card table td::before {
+  .card table td::before {
     content: attr(data-label);
     float: left;
     padding-bottom: 16px;

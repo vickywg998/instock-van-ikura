@@ -1,5 +1,6 @@
 import React from 'react'
-import dot from '../Assets/Icons/Icon-kebab-default.svg'
+import dot from '../../Assets/Icons/Icon-kebab-default.svg'
+import {Link} from 'react-router-dom'
 const InventoryItem = props => {
   return (
     <tr>
@@ -13,7 +14,7 @@ const InventoryItem = props => {
       <td data-label="QUANTITY">{props.data.quantity}</td>
       <td data-label="STATUS">{props.data.status}</td>
       <td data-label="DOT">
-        <img src={dot} alt="" />
+      <Link to={`inventory/${props.data.id}`}><img src={dot} alt="" /></Link>
       </td>
     </tr>
   )
