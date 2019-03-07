@@ -1,7 +1,7 @@
 import React from 'react'
 import './AddWarehouse.scss'
 
-export default function AddWarehouse() {
+export default function AddWarehouse(props) {
   return (
     <div className="AddWarehouse">
       <h1 className="addwarehouse__title">Add New</h1>
@@ -58,7 +58,9 @@ export default function AddWarehouse() {
       </div>
       <div className="add__actionButton">
         <button className="btn-action btn-save">SAVE</button>
-        <button className="btn-action btn-cancel">CANCEL</button>
+        <button className="btn-action btn-cancel" onClick={props.closeModal}>
+          CANCEL
+        </button>
       </div>
     </div>
   )
