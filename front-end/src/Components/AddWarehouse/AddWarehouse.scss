@@ -5,9 +5,13 @@
     @include h1-font;
     font-size: 24px;
     margin: 28px 0;
+    @media only screen and (min-width: $break-tablet) {
+      @include h1-font;
+    }
   }
   h5 {
     @include h5-font;
+    font-weight: 600;
   }
   .input {
     width: 100%;
@@ -19,16 +23,29 @@
     margin-bottom: 16px;
     font-size: 12px;
     outline: none;
+    @media only screen and (min-width: $break-tablet) {
+      width: 220px;
+    }
   }
   .description {
     height: 80px;
+    @media only screen and (min-width: $break-tablet) {
+      width: 480px;
+    }
   }
   .add__actionButton {
     display: flex;
     flex-direction: column;
+    @media only screen and (min-width: $break-tablet) {
+      flex-direction: row-reverse;
+      justify-content: flex-start;
+    }
   }
   .btn-action {
     height: 48px;
+    @media only screen and (min-width: $break-tablet) {
+      width: 160px;
+    }
   }
   .btn-save {
     color: white;
@@ -39,5 +56,22 @@
     background-color: white;
     color: #004892;
     border: none;
+  }
+}
+
+.add__address {
+  @media only screen and (min-width: $break-tablet) {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.add__address,
+.add__contact--info,
+.add__contact--name {
+  @media only screen and (min-width: $break-tablet) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
