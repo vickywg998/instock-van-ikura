@@ -1,7 +1,7 @@
 import React from 'react'
 import dot from '../../Assets/Icons/Icon-kebab-default.svg'
 import { Link } from 'react-router-dom'
-import "./inventoryItem.css"
+import "./InventoryItem.css"
 
 class InventoryItem extends React.Component {
 
@@ -15,12 +15,12 @@ class InventoryItem extends React.Component {
 
   render() {
     return (
-
+      <tr>
         <td data-label="ITEM">
-        <Link id="link__color--black" to={`/inventory/${props.data.id}`}>
-          {props.data.item}
+        <Link id="link__color--black" to={`/inventory/${this.props.data.id}`}>
+          {this.props.data.item}
           <br />
-          <p className="description__font">{props.data.description}</p>
+          <p className="description__font">{this.props.data.description}</p>
           </Link>
         </td>
 
@@ -31,7 +31,7 @@ class InventoryItem extends React.Component {
         <td data-label="DOT">
           <div className="dropdown">
           <img src={dot} alt="" onClick={this.toggleClass} className="pointer"/>
-            <div className='hide' ref={self => this.hide = self}>Remove</div>
+            <div className='hide' ref={self => this.hide = self} name={this.props.data.id}>Remove</div>
           </div>
 
         </td>
