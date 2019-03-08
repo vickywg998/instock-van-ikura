@@ -31,7 +31,7 @@ class InventoryItem extends React.Component {
         <td data-label="DOT">
           <div className="dropdown">
           <img src={dot} alt="" onClick={this.toggleClass} className="pointer"/>
-            <div className='hide' ref={self => this.hide = self}>Remove</div>
+            <div className='hide' ref={self => this.hide = self} name={this.props.data.id}>Remove</div>
           </div>
 
         </td>
