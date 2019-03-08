@@ -33,6 +33,18 @@ class Warehouses extends Component {
     this.setState({ adding: false })
   }
 
+  handleNewLocation = newLocation => {
+    axios
+      .post(locationURL, newLocation)
+      .then(response => {
+        this.setState({
+          data: response.data,
+        })
+      })
+      .then(this.setState({ adding: false }))
+      .catch(err => console.log(err))
+  }
+
   render() {
     let rows = this.state.data.map((warehouse, i) => {
       return (
@@ -54,7 +66,10 @@ class Warehouses extends Component {
           show={this.state.adding}
           closeModal={this.handleCancelAddingLocation}
         >
-          <AddWarehouse closeModal={this.handleCancelAddingLocation} />
+          <AddWarehouse
+            closeModal={this.handleCancelAddingLocation}
+            handleNewLocation={this.handleNewLocation}
+          />
         </Modal>
         <Navbar routeProps={this.props.routeProps} />
         <div className="location__container">
