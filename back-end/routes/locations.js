@@ -31,7 +31,7 @@ router.post('/', (req, res) => {
   const newWarehouse = {
     id: uuid.v4(),
     name: req.body.name,
-    address: req.body.address,
+    address: `${req.body.address}, ${req.body.location} `,
     managerName: req.body.managerName,
     managerTitle: req.body.managerTitle,
     phone: req.body.phone,

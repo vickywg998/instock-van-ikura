@@ -34,7 +34,15 @@ class Warehouses extends Component {
   }
 
   handleNewLocation = newLocation => {
-    console.log(newLocation)
+    axios
+      .post(locationURL, newLocation)
+      .then(response => {
+        this.setState({
+          data: response.data,
+        })
+      })
+      .then(this.setState({ adding: false }))
+      .catch(err => console.log(err))
   }
 
   render() {
